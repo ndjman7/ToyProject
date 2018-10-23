@@ -25,7 +25,7 @@ SECRET_KEY = 'podfh4!h)05=(rw$^pcwhtc$5ug2jc_%o*u4x3nni#a5-ntgp0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,3 +120,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static2'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+LOGIN_REDIRECT_URL = '/blog/'
