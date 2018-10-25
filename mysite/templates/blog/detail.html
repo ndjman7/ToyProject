@@ -3,9 +3,12 @@
 <div class="row">
     <div class="col-sm-3"></div>
     <div class="col-sm-6">
+        {% if request.user == blog.user %}
         <p><a href="{% url 'blog:edit' blog.pk %}" class="btn btn-primary">수정</a></p>
+        {% endif %}
         <h1 class="display-4">{{ blog.title }}</h1>
         <span class="badge badge-secondary">{{ blog.updated_at }}</span>
+        <span class="badge badge-secondary">{{ blog.user }}님 작성</span>
         {% if blog.main_image %}
             <img src="{{ blog.main_image.url }}" alt="" class="img-thumbnail" style="width: 600px; height: 600px;">
         {% endif %}

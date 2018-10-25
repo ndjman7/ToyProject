@@ -3,7 +3,7 @@
     <div class="row">
     {% for blog in blogs %}
         <div class="col-sm-4" style="padding-top:50px;">
-            <div class="card" style="width: 18rem; padding-top">
+            <div class="card" style="width: 18rem;">
               <img class="card-img-top" src="{% if blog.main_image %}{{ blog.main_image.url }}{% endif %}" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">{{ blog.title }}</h5>

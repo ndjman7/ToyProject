@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div style="padding-top: 50px;">
+    <form action="" method="POST">
+    {% csrf_token %}
+      {{ form.as_p }}
+      <div style="padding-top: 50px;">
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </div>
+    </form>
+</div>
+{% endblock %}
