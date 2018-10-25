@@ -1,14 +1,13 @@
 [Unit]
- Description=uWSGI Emperor service
- After=syslog.target 
+Description=uWSGI Emperor service After=syslog.target
 
 [Service]
- ExecStart=/home/ubuntu/venv/bin/uwsgi —master --emperor /home/ubuntu/ToyProject/config
- Restart=always 
-KillSignal=SIGQUIT 
-Type=notify 
-StandardError=syslog 
-NotifyAccess=all 
+ ExecStart=/home/ubuntu/venv/bin/uwsgi --master --emperor /home/ubuntu/ToyProject/config
+ Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
 
 [Install]
- WantedBy=multi-user.target
+WantedBy=multi-user.target

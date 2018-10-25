@@ -1,0 +1,7 @@
+sudo cp /home/ubuntu/ToyProject/config/nginx-app.conf /etc/nginx/sites-available/blog
+sudo rm -rf /etc/nginx/sites-enabled/*
+sudo ln -s /etc/nginx/sites-available/blog /etc/nginx/sites-enabled/blog
+sudo cp /home/ubuntu/ToyProject/config/uwsgi.service /etc/systemd/system/uwsgi.service
+sudo systemctl enable uwsgi
+sudo systemctl restart uwsgi
+sudo systemctl restart nginx
