@@ -49,7 +49,7 @@ def create(request):
 @login_required
 def edit(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
-    if blog.user is not request.user:
+    if blog.user != request.user:
         return redirect('blog:index')
     if request.method == 'GET':
         form = BlogForm(instance=blog)
