@@ -3,7 +3,7 @@
  After=syslog.target 
 
 [Service]
- ExecStart=/home/ubuntu/venv/bin/uwsgi —master --emperor /etc/uwsgi/sites
+ ExecStart=/home/ubuntu/venv/bin/uwsgi —master --emperor /home/ubuntu/ToyProject/config
  Restart=always 
 KillSignal=SIGQUIT 
 Type=notify 
