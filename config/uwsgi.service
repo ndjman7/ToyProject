@@ -1,9 +1,9 @@
 [Unit]
-Description=uWSGI Emperor service 
+Description=uWSGI Emperor service
 After=syslog.target
 [Service]
- ExecStart=/home/ubuntu/venv/bin/uwsgi --master --emperor /home/ubuntu/ToyProject/config
- Restart=always
+ExecStart=/home/ubuntu/venv/bin/uwsgi --master --emperor /home/ubuntu/ToyProject/config
+Restart=always
 KillSignal=SIGQUIT
 Type=notify
 StandardError=syslog
